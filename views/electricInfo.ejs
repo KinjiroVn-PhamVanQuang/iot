@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Electric Info</title>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <h1>Electric Information</h1>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Device Name</th>
+      <th>Voltage</th>
+      <th>Amperage</th>
+    </tr>
+    <% electric.forEach(device => { %>
+      <tr>
+        <td><%= device.id %></td>
+        <td><%= device.name %></td>
+        <td><%= device.voltage %></td>
+        <td><%= device.amperage %></td>
+      </tr>
+    <% }); %>
+  </table>
+</body>
+</html>
